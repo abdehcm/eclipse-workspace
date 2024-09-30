@@ -1,0 +1,17 @@
+package clasefile;
+
+import java.io.File;
+
+public class Pruebas {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//Intentar crear una carpet llamada datos/
+		File d = new File("home/alumnadotarde/Escritorio/d");
+		d.mkdir();
+		
+
+	}
+
+}

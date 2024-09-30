@@ -1,0 +1,32 @@
+package clasefile;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class FlujoCaracteres2 {
+
+	public static void main(String[] args) {
+		// Nombre del archivo donde se escribirá
+		String nombreFichero = "hola_mundo.txt";
+
+		try {
+			// Crear el objeto FileWriter en modo append (true para añadir al final del
+			// archivo)
+			FileWriter escritor = new FileWriter(nombreFichero, true);
+
+			// Escribir "Hola Mundo" en el archivo ya existente
+			escritor.write("\nHola Mundo"); // Añade un salto de línea y luego "Hola Mundo"
+
+			// Cerrar el FileWriter para liberar recursos
+			escritor.close();
+
+			System.out.println("Se ha añadido 'Hola Mundo' al archivo: " + nombreFichero);
+		} catch (IOException e) {
+			System.out.println("Ocurrió un error al escribir en el archivo.");
+			e.printStackTrace();
+		}
+
+	}
+
+}

@@ -1,0 +1,33 @@
+package clasefile;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class FlujoDeCaracteres {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		// Nombre del archivo donde se escribirá
+		String nombreFichero = "hola_mundo.txt";
+
+		try {
+			// Crear el objeto FileWriter que permite escribir en el archivo
+			FileWriter fw = new FileWriter(nombreFichero);
+
+			// Escribir "Hola Mundo" en el archivo
+			fw.write("Hola Mundo");
+
+			// Cerrar el FileWriter para liberar recursos
+			fw.close();
+
+			// System.out.println("Se ha escrito 'Hola Mundo' en el archivo: " +
+			// nombreFichero);
+		} catch (IOException e) {
+			System.out.println("Ocurrió un error al escribir en el archivo.");
+			e.printStackTrace();
+		}
+
+	}
+
+}
